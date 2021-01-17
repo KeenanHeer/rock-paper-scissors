@@ -60,7 +60,7 @@ def getScores():
 def sortedData(data):
     data.sort(key=lambda  s:s[0],reverse=True)
     inAData = []
-    for totalScore,sco reData in data:
+    for totalScore,scoreData in data:
         inAData.append([scoreData['name'],scoreData['age'],scoreData['score'],totalScore])
     print(tabulate(inAData, headers=['Name', 'Age','Scores','Total Score']))
 
