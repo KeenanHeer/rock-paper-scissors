@@ -6,7 +6,7 @@ from tabulate import tabulate
 
 def rockPaperScissors():
     print("\n"*2)
-    userinput = input("rock , paper or scissors ")
+    userinput = input("would you like rock , paper or scissors? ")
     gameOptions  = ['rock','paper','scissors']
     gameWinOptions =  ['paper','scissors','rock']
     randomIntegerGen = random.randint(0,len(gameOptions)-1)
