@@ -2,7 +2,7 @@ import random
 import collections
 import copy
 from tabulate import tabulate
-       
+NUMBER_OF_GAMES = 5
 
 def rockPaperScissors():
     print("\n"*2)
@@ -24,7 +24,7 @@ def rockPaperScissors():
 
 def startGame():
     totalScore = 0
-    for num in range(0,2):
+    for num in range(0,NUMBER_OF_GAMES):
         currentScore = rockPaperScissors()
         totalScore = totalScore + currentScore
         print(f'\n\n The total score is {totalScore}\n')
