@@ -1,6 +1,7 @@
 import random
 import collections
 import copy
+from tabulate import tabulate
        
 
 def rockPaperScissors():
@@ -58,10 +59,10 @@ def getScores():
 
 def sortedData(data):
     data.sort(key=lambda  s:s[0],reverse=True)
-    print(f"Name | Age | TotalScore")
-    print('________________________\n')
-    for totalScore,score in data:
-        print(f"{score['name']} | {score['age']} | {totalScore}")
+    inAData = []
+    for totalScore,sco reData in data:
+        inAData.append([scoreData['name'],scoreData['age'],scoreData['score'],totalScore])
+    print(tabulate(inAData, headers=['Name', 'Age','Scores','Total Score']))
 
 def getNewUserData():
     name = input("What is your name?")
@@ -93,14 +94,3 @@ def main():
         print("\n"*50)
     
 main()
-# print(sortedData(getScoresTwo()))
-
-# def oneGame():
-#     for "name" in main():
-#         main() = main
-#     if "name" in main == "name" in main:
-#         break
-
-# oneGame()       
-
-# 1) Ensure that a person with the same and age, cannot resubmit a score.
