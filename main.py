@@ -6,13 +6,13 @@ NUMBER_OF_GAMES = 5
 
 def rockPaperScissors():
     print("\n"*2)
-    userinput = input("Choose out of the following options \n 1.rock \n 2.paper \n 3.scissors?")
+    userinput = input("Choose out of the following options \n 1.rock \n 2.paper \n 3.scissors? ")
     print("\n"*100)
     gameOptions  = ['rock','paper','scissors']
     gameWinOptions =  ['paper','scissors','rock']
     randomIntegerGen = random.randint(0,len(gameOptions)-1)
 
-    print(f'\n The computer guessed {gameOptions[randomIntegerGen]} \n you guessed {userinput}')
+    print(f'\n The computer guessed {gameOptions[randomIntegerGen]} \n you guessed {userinput} ')
     if userinput == gameOptions[randomIntegerGen]:
         print("\n3 points good effort\n")
         return 3
