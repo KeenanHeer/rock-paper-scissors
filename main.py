@@ -6,20 +6,21 @@ NUMBER_OF_GAMES = 5
 
 def rockPaperScissors():
     print("\n"*2)
-    userinput = input("would you fancy rock , paper or scissors? ")
+    userinput = input("Choose out of the following options \n 1.rock \n 2.paper \n 3.scissors?")
+    print("\n"*100)
     gameOptions  = ['rock','paper','scissors']
     gameWinOptions =  ['paper','scissors','rock']
     randomIntegerGen = random.randint(0,len(gameOptions)-1)
 
-    print(f'The computer guessed {gameOptions[randomIntegerGen]} and you guessed {userinput}')
+    print(f'\n The computer guessed {gameOptions[randomIntegerGen]} \n you guessed {userinput}')
     if userinput == gameOptions[randomIntegerGen]:
-        print("3 points")
+        print("\n3 points good effort\n")
         return 3
     elif userinput == gameWinOptions[randomIntegerGen]:
-        print('10 points')
+        print("\n10 points well done\n")
         return 10
     else:
-        print(f"0 points unlucky, the correct answer was {gameOptions[random.randint(0,len(gameOptions)-1)]}")
+        print(f"\n 0 points unlucky, \nThe correct answer was {gameOptions[random.randint(0,len(gameOptions)-1)]}\n")
         return 0
 
 def startGame():
@@ -27,7 +28,7 @@ def startGame():
     for num in range(0,NUMBER_OF_GAMES):
         currentScore = rockPaperScissors()
         totalScore = totalScore + currentScore
-        print(f'\n\n The total score is {totalScore}\n')
+        print(f'\n\n The total score so far is {totalScore}\n but you can still improve')
 
         with open("newscore.txt","a") as myNewFile:
             myNewFile.write(str(currentScore)+",") 
@@ -66,8 +67,9 @@ def sortedData(data):
 
 def getNewUserData():
     name = input("What is your name?")
-    print("\n"*2)
+    print("\n"*50)
     age = input("What is your age?")
+    print('\n'*50)
     with open("newscore.txt","a") as myNewFile:
         myNewFile.write("#################################\n")
         myNewFile.write("age:"+ age + ";name:" + name +"\n" + "Score:")
